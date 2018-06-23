@@ -1,0 +1,19 @@
+﻿@model realProject.Models.Login
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<form method="post" action="@Url.Action("Index", "Registration")">
+	@Html.LabelFor(Model => Model.Username, new { style = "color:red" })
+	@Html.TextBoxFor(Model => Model.Username)
+	<br />
+	@Html.LabelFor(Model => Model.password, new { style = "color:red" })
+	@Html.PasswordFor(Model => Model.password)
+	<br />
+	<input type="submit" value="Create" id="Submit" class="btn btn-default" onclick="location.href='@Url.Action("Index", "Registration")'" />
+
+
+</form>
